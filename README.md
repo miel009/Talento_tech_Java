@@ -1,2 +1,2 @@
 # Talento_tech_Java
-Proyecto inicial con Java, para curso de de talento tech.
+Proyecto inicial con Java. Pre-entrega, para el curso de Talento Tech.
