@@ -6,10 +6,12 @@ public class Pedido {
 
     private int id_pedido;
     private ArrayList<String> pedidoLista; 
+    
 
-    public Pedido(int id_pedido) {
-        this.id_pedido= id_pedido; 
+    public Pedido(int id_pedido ) {
+        this.id_pedido= id_pedido++; 
         this.pedidoLista= new ArrayList<>();
+        
     }   
 
     public int getId_pedido() {
@@ -26,4 +28,7 @@ public class Pedido {
     public void setPedidoLista(ArrayList<String> pedidoLista) {
         this.pedidoLista = pedidoLista;
     }
+
+    
+   
 }

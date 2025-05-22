@@ -1,6 +1,6 @@
 # Talento_tech_Java - Melany Ascencio 
 ¡Bienvenido a mi Proyecto para el curso de Talento Tech Java! 
-Esta es mi pre-entrega donde aplico los conceptos fundamentales de Java para construir
+Esta es mi pre-entrega donde aplico los conceptos fundamentales de Java para construir una aplicación de gestión de productos y pedidos.
 
 Requerimientos técnicos:
 
