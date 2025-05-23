@@ -73,12 +73,20 @@ public class Producto {
 
     //metodos-funciones 
 
-    public static Producto AgregarProducto(int id_producto) {
+    public static Producto agregarProducto(int id_producto) {
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
 
+        String nombre;
+        while (true) {
         System.out.println("Ingresa nombre del producto:");
-        String nombre = sc.nextLine();
-        
+        nombre = sc.nextLine().trim();
+        if (!nombre.isEmpty()) {
+            break; // Salir del bucle si el nombre no está vacío
+        } else {
+            System.out.println("El nombre no puede estar vacío. Intenta otra vez.");   
+        }
+        }
         System.out.println("Ingrese precio del producto:");
         double precio = sc.nextDouble();
         sc.nextLine(); 
@@ -94,6 +102,8 @@ public class Producto {
         sc.nextLine(); 
         
         return new Producto(id_producto, nombre, precio, descripcion, categoria, cant_Stock);
+
+        
     }
 }
 
