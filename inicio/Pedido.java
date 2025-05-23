@@ -4,21 +4,22 @@ import java.util.ArrayList;
 
 public class Pedido {
 
-    private int id_pedido;
+    private static int contador_pedidos = 1;
+    private int num_Pedido; 
     private ArrayList<String> pedidoLista; 
     
 
-    public Pedido(int id_pedido ) {
-        this.id_pedido= id_pedido++; 
+    public Pedido() {
+        this.num_Pedido= contador_pedidos++; 
         this.pedidoLista= new ArrayList<>();
         
     }   
 
-    public int getId_pedido() {
-        return id_pedido;
+    public int getNum_Pedido() {
+        return num_Pedido;
     }
-    public void setId_pedido(int id_pedido) {
-        this.id_pedido = id_pedido;
+    public void setNum_Pedido(int num_Pedido) {
+        this.num_Pedido = num_Pedido;
     }
 
     public ArrayList<String> getPedidoLista() {

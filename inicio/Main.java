@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+
     static Scanner sc = new Scanner(System.in);
     static ArrayList<Producto> listaProductos = new ArrayList<>();
+    static ArrayList<Pedido> listaPedidos = new ArrayList<>();
 
     public static void main(String[] args) {
 
@@ -93,11 +95,9 @@ public class Main {
                     if (!mostrar_p) {
                         System.out.println("Producto no encontrado.");
                     }
-
                     break;
 
                 case 4:
-
                     System.out.println("Opción actualizar producto");
                     System.out.println("Ingrese el ID del producto a buscar:");
                     int idBuscar = sc.nextInt();
@@ -118,14 +118,13 @@ public class Main {
                     }
 
                     break;
-
                 case 5:
                     eliminarProducto();
                     // Llamar a la función eliminarProducto
                     break;
 
                 case 6:
-                    System.out.println("Opción crear pedido");
+                    crearPedido();
                     break;
                 default:
                     System.out.println("Saliendo...Gracias por su visita!.");
@@ -146,13 +145,10 @@ public class Main {
             System.out.println("Producto eliminado.");
         } else {
             System.out.println("Producto no encontrado.");
-
         }
-
     }
 
     public static Producto agregarProducto(int id_producto) {
-        Scanner sc = new Scanner(System.in);
 
         System.out.println("Ingresa nombre del producto:");
         String nombre = sc.nextLine();
@@ -171,7 +167,7 @@ public class Main {
         int cant_Stock = sc.nextInt();
         sc.nextLine();
 
-        return new Producto_Nacional (id_producto, nombre, precio, descripcion, categoria, cant_Stock);
+        return new Producto_Nacional(id_producto, nombre, precio, descripcion, categoria, cant_Stock);
     }
 
     public static Producto agregarProductoImportado(int id_producto) {
@@ -198,4 +194,16 @@ public class Main {
         return new Producto_Importado(id_producto, nombre, precio, descripcion, categoria, stock, estado, pais, marca);
     }
 
+    public static Pedido crearPedido() {
+
+    Pedido nuevoPedido = new Pedido();
+    System.out.println("Ingrese ID del pedido:");
+    int id_pedido = sc.nextInt();
+    sc.nextLine();
+
+    //continuar... 
+
+        return nuevoPedido;
+    
+    }
 }
