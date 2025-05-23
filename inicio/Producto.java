@@ -1,8 +1,6 @@
 package inicio;
 
-import java.util.Scanner;
-
-public class Producto {
+public abstract class Producto  {
 
     private int id_producto; 
     private String nombre;
@@ -10,7 +8,6 @@ public class Producto {
     private String descripcion;
     private String categoria; 
     private int cant_Stock;
-    
 
 
     public Producto (int id_producto, String nombre , double precio,String descripcion, String categoria, int cant_Stock){
@@ -70,41 +67,15 @@ public class Producto {
         this.cant_Stock = cant_Stock;
     }
 
+    @Override
+    public String toString() {
+        return "ID: " + id_producto + " | Nombre: " + nombre + " | Precio: " + precio + " | Descripción: "
+                + descripcion + " | Categoría: " + categoria + " | Stock: " + cant_Stock;
+    }   
+    
+    
 
-    //metodos-funciones 
-
-    public static Producto agregarProducto(int id_producto) {
-        @SuppressWarnings("resource")
-        Scanner sc = new Scanner(System.in);
-
-        String nombre;
-        while (true) {
-        System.out.println("Ingresa nombre del producto:");
-        nombre = sc.nextLine().trim();
-        if (!nombre.isEmpty()) {
-            break; // Salir del bucle si el nombre no está vacío
-        } else {
-            System.out.println("El nombre no puede estar vacío. Intenta otra vez.");   
-        }
-        }
-        System.out.println("Ingrese precio del producto:");
-        double precio = sc.nextDouble();
-        sc.nextLine(); 
-
-        System.out.println("Ingrese descripción:");
-        String descripcion = sc.nextLine();
-
-        System.out.println("Ingrese categoría:");
-        String categoria = sc.nextLine();
-
-        System.out.println("Ingrese stock:");
-        int cant_Stock = sc.nextInt();
-        sc.nextLine(); 
-        
-        return new Producto(id_producto, nombre, precio, descripcion, categoria, cant_Stock);
-
-        
-    }
+   
 }
 
 

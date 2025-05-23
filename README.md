@@ -21,19 +21,23 @@ Inicio de la Aplicación: Al ejecutar el programa, se presentará el siguiente m
 
 2) Listar Productos
 
-3) Buscar/Actualizar Producto
+3) Buscar/Mostrar Producto
 
-4) Eliminar Producto
+4) Actualizar producto
 
-5) Crear Pedido
+5) Eliminar producto
 
-6) Listar Pedidos
+6) Crear Pedido
 
 7) Salir
 
 Selecciona “1” para Agregar Producto. El programa pregunta el nombre, precio, stock. Se crea un objeto Producto y se agrega a la lista.
 
-Selecciona “2” para Listar Productos, y el sistema muestra todos los productos con su id, nombre, precio, stock.
+Selecciona “2” para Listar Productos, y el sistema muestra todos los productos con su id, nombre, precio, descripcion, categoria y cantidad de stock disponible. 
+
+Selecciona “3” para buscar un producto , si existe , lo muestra y si no imprime un error de "producto no encontrado".
+
+Selecciona “4” para actualizar el nombre de un prducto. 
 
 Selecciona “5” para Crear Pedido. El sistema pregunta cuántos productos va a agregar, pide ID de producto y cantidad. Verifica stock; si no hay suficiente, lanza StockInsuficienteException o un mensaje apropiado. Si se confirma, descuenta stock y crea el pedido en la colección de pedidos.
 
